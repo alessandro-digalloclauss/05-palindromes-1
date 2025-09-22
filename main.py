@@ -1,21 +1,15 @@
-#### Fonction secondaire
 
-
-def ispalindrome(p):
-
-    # votre code ici
-    
-    return False
-
-#### Fonction principale
-
+def ispalindrome(s):
+    s = s.replace(" ", "").lower()
+    return s == s[::-1]
 
 def main():
-
-    # vos appels à la fonction secondaire ici
-
-    for s in ["radar", "kayak", "level", "rotor", "civique", "deifie"]:
-        print(s, ispalindrome(s))
+    mots = [
+        "radar", "kayak", "level", "rotor", "civique", "deifie",
+        "bonjour", "python", "été", "ressasser"
+    ]
+    for s in mots:
+        print(f"{s} : {ispalindrome(s)}")
 
 
 if __name__ == "__main__":
